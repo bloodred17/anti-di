@@ -1,6 +1,6 @@
 export declare type Constructor<T> = new (...args: any) => T;
 
-export abstract class BaseUtil {
+export abstract class Injectable {
   private static instanceMap = new Map<string, any>();
   private static instanceInitState: Record<string, boolean> = {};
 
