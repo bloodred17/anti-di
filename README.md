@@ -1,12 +1,12 @@
-# TS DI
+# Anti DI
 
-Tiny, easy to use IoC DI made for Typescript
+Tiny, easy to use IoC Dependency Injection container made for Typescript/Javascript
 
 No container declaration. <br>
 No Reflect Metadata. <br>
 No unnecessary decorators. <br>
 No over the top features. <br>
-Simple Static Singleton Pattern. <br> 
+Simple Static Singleton Pattern. <br>
 
 ## Usage
 
@@ -23,4 +23,6 @@ export class UserService {
 
 ```
 
-Done. 
+> It only supports property injection which is enough for most use cases. For constructor based injection checkout tsyringe, inversify, typedi.
+
+> It uses inheritance to maintain references inside the object so you don't have to maintain containers separately.
