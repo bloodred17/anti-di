@@ -8,6 +8,12 @@ No unnecessary decorators. <br>
 No over the top features. <br>
 Simple Static Singleton Pattern. <br>
 
+## Setup
+
+```shell
+npm install anti-di
+```
+
 ## Usage
 
 ```Typescript
