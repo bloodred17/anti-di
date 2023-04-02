@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anti DI</title>
+  </head>
+  <body>
+    <h1 id="anti-di">Anti DI</h1>
+    <p>
+      Tiny, easy to use IoC Dependency Injection container made for
+      Typescript/Javascript
+    </p>
+    <p>
+      No container declaration. <br />
+      No Reflect Metadata. <br />
+      No unnecessary decorators. <br />
+      No over the top features. <br />
+      Simple Static Singleton Pattern. <br />
+    </p>
+    <h2 id="setup">Setup</h2>
+    <pre><code class="lang-shell">npm <span class="hljs-keyword">install</span> anti-di
+</code></pre>
+    <h2 id="usage">Usage</h2>
+    <pre><code class="lang-Typescript"><span class="hljs-comment">// Extend Injectable to make a class Injectable</span>
+export <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyClass</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Injectable</span> </span>{
+    ...
+}
+
+<span class="hljs-comment">// Use Injectable class</span>
+export <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UserService</span> </span>{
+    <span class="hljs-keyword">private</span> readonly myClass = <span class="hljs-type">MyClass</span>.getInstance&lt;<span class="hljs-type">MyClass</span>&gt;(<span class="hljs-type">MyClass</span>);
+}
+</code></pre>
+    <blockquote>
+      <p>
+        It only supports property injection which is enough for most use cases.
+        For constructor based injection checkout tsyringe, inversify, typedi.
+      </p>
+      <p>
+        It uses inheritance to maintain references inside the object so you
+        don&#39;t have to maintain containers separately.
+      </p>
+    </blockquote>
+    ̦
+  </body>
+</html>
